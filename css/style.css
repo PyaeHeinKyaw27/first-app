@@ -1,0 +1,118 @@
+@font-face {
+    font-family: bodyfont;
+    src: url("../font/Barlow/Barlow-Medium.ttf"),
+    url("../font/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: titlefont;
+    src: url("../font/Roboto/Roboto-Bold.ttf");
+}
+h1{
+    font-family: titlefont;
+}
+body{
+    font-family: bodyfont;
+}
+.nav-link{
+    color: black;
+}
+.animate{
+    display: inline-block;
+    width: 100%;
+    animation: popup 3s steps(10) infinite, blinking 0.5s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid palevioletred;
+    padding-right: 13px;
+}
+@keyframes popup {
+    from{width: 0%;}
+    to{width: 100%;}
+}
+@keyframes blinking{
+    from {border-right: 2px solid transparent;}
+    to{border-right: 2px solid palevioletred;}
+}
+/* banner */
+.carousel-inner img{
+    height: 450px;
+    object-fit: cover;
+}
+.title {
+    text-align: center;
+    margin: 40px 0px;
+    position: relative;
+}
+.title::after{
+    content: "";
+    width: 70px;
+    height: 5px;
+    background-color: tomato;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* products */
+.card-img-top{
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+}
+.card-overlay{
+    background-color: rgba(0,0,111,0.4);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* padding: 20px; */
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(100%);
+    color: yellow;
+}
+
+.card:hover .card-overlay{
+    transform: translateY(0%);
+}
+.card:hover .card-img-top{
+    transform: scale(1.5);
+} 
+/* Review Box */
+.review-box{
+    background-color: #d870933A;
+    border-radius: 20px;
+    height: 300px;
+    overflow: hidden;
+}
+.review-box img{
+    border-radius: 50%;
+    height: 100%;
+}
+.review-box img,
+.review-box .review-message{
+    padding: 20px;
+    width: 50%;
+}
+.review-message p i{
+    font-size: 18px;
+    padding-right: 10px;
+}
+.contact{
+    background-color: #ebd50b81;
+}
+
+/* Footer */
+footer {
+    background-color: #ebd50bef;
+}

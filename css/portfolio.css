@@ -1,0 +1,99 @@
+@font-face {
+    font-family: bodyfont;
+    src: url("../font/Barlow/Barlow-ExtraBoldItalic.ttf"),
+    url("../font/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: titlefont;
+    src: url("../font/Roboto/Roboto-Bold.ttf");
+}
+body{
+    font-family: bodyfont;
+    background: linear-gradient(black,rgb(129, 14, 39) ,red,black);
+}
+h1{
+    font-family: titlefont;
+}
+.site-color{
+    color: rgb(2, 2, 2);
+    font-weight: bolder;
+}
+.container{
+    padding: 0px 30px;
+    /* border: 1px solid red; */
+}
+.title{
+    text-align: center;
+    background: linear-gradient(rgb(175, 36, 36), rgb(204, 190, 190));
+    font-size: 40px;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: titlefont;
+    text-transform: uppercase;
+    padding: 30px 0px;
+    width: 100%;
+}
+.animate{
+    display: inline-block;
+    width: 100%;
+    animation: popup 3s steps(10) infinite, blinking 0.5s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid palevioletred;
+    padding-right: 22px;
+    color: white;
+}
+@keyframes popup {
+    from{width:0%}
+    to{width:100%}
+}
+@keyframes blinking{
+    from{border-right: 2px solid transparent;}
+    to{border-right: 2px solid palevioletred;}
+}
+    /* banner */
+.banner{
+    background-image: url("../img/bat6.jpg");
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-115%,-20%);
+    color: white;
+    width: 40%;
+}
+/* About*/
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.about .about-img,
+.about .about-content{
+    width: 50%;
+    padding: 20px;
+}
+.about .about-img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid rgb(65, 12, 12);
+    border-radius: 10px;
+    box-shadow: 3px 4px 10px;
+}
+.about .about-content h2{
+    font-weight: bold;
+}
+.about .about-content p,
+.about .about-content h2{
+    padding: 10px 0px;
+    text-align: justify;
+    color: white;
+}
